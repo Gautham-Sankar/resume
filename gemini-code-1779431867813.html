@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gautham Sankar — Senior Software Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --bg:       #F5F4EF;
+  --surface:  #FFFFFF;
+  --surface2: #F9F8F5;
+  --ink:      #111110;
+  --ink2:     #56544E;
+  --ink3:     #9C9A93;
+  --acc:      #3730A3;
+  --accl:     #EEF2FF;
+  --accm:     #6366F1;
+  --border:   #E4E2DB;
+  --borderS:  #C9C7BF;
+  --shadow:   0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --shadowM:  0 4px 16px rgba(0,0,0,0.07), 0 1px 4px rgba(0,0,0,0.05);
+  --shadowL:  0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+}
+
+html{scroll-behavior:smooth}
+
+body{
+  font-family:'DM Sans',sans-serif;
+  font-weight:300;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+  font-size:16px;
+}
+
+/* progress */
+#bar{
+  position:fixed;top:0;left:0;height:2px;width:0%;
+  background:var(--acc);z-index:1000;
+  transition:width 0.09s linear;
+}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:200;
+  background:rgba(245,244,239,0.93);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border)}
+.nav-in{
+  max-width:1040px;margin:0 auto;padding:0 2.5rem;
+  height:58px;display:flex;align-items:center;justify-content:space-between;
+}
+.nav-logo{
+  font-family:'Instrument Serif',serif;
+  font-size:1.05rem;font-weight:400;
+  color:var(--ink);text-decoration:none;letter-spacing:-0.01em;
+}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{
+  font-size:0.82rem;font-weight:400;
+  color:var(--ink3);text-decoration:none;
+  letter-spacing:0.01em;transition:color 0.18s;
+}
+.nav-links a:hover{color:var(--ink)}
+.nav-btn{
+  font-size:0.8rem;font-weight:400;
+  color:var(--acc);text-decoration:none;
+  border:1px solid currentColor;border-radius:6px;
+  padding:0.38rem 1rem;transition:all 0.2s;letter-spacing:0.01em;
+}
+.nav-btn:hover{background:var(--acc);color:#fff;border-color:var(--acc)}
+
+/* ── LAYOUT ── */
+main{max-width:1040px;margin:0 auto;padding:0 2.5rem}
+section{padding:5.5rem 0;border-bottom:1px solid var(--border)}
+
+.slabel{
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.68rem;font-weight:500;
+  color:var(--ink3);letter-spacing:0.12em;
+  text-transform:uppercase;margin-bottom:0.7rem;
+}
+h2.sh{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(2rem,4vw,2.8rem);
+  font-weight:400;font-style:italic;
+  letter-spacing:-0.02em;line-height:1.15;
+  color:var(--ink);margin-bottom:3rem;
+}
+
+/* ── HERO ── */
+.hero{padding:7rem 0 5.5rem;border-bottom:1px solid var(--border)}
+
+.hero-badge{
+  display:inline-flex;align-items:center;gap:0.5rem;
+  font-family:'JetBrains Mono',monospace;
+  font-size:0.7rem;font-weight:500;color:var(--acc);
+  background:var(--accl);border:1px solid #C7D2FE;
+  border-radius:100px;padding:0.35rem 0.9rem;
+  margin-bottom:2.25rem;letter-spacing:0.05em;
+}
+.hero-badge-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:var(--accm);
+  animation:pulse 2.2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.4;transform:scale(0.8)}}
+
+h1.hname{
+  font-family:'Instrument Serif',serif;
+  font-size:clamp(4rem,9vw,6.5rem);
+  font-weight:400;font-style:italic;
+  line-height:1.0;letter-spacing:-0.035em;
+  color:var(--ink);margin-bottom:0.25rem;
+}
+h1.hname em{color:var(--acc);font-style:inherit}
+
+.hrole{
+  font-size:1rem;font-weight:300;
+  color:var(--ink2);margin-bottom:2.5rem;
+  letter-spacing:0.01em;
+}
+.hrole .sep{color:var(--ink3);margin:0 0.55rem}
+
+.hbio{
+  max-width:600px;font-size:1.05rem;
+  line-height:1.85;color:var(--ink2);
+  margin-bottom:3rem;font-weight:
